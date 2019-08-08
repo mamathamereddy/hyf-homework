@@ -1,0 +1,116 @@
+/*------------------container properties------------*/
+
+.container {
+    border: 2px solid #E3EDD8;
+    margin-top: 50px;
+    margin-bottom: 100px;
+    margin-right: 150px;
+    margin-left: 80px;
+    background: #E3EDD8;
+}
+
+/*---------------------------header--------------*/
+
+#header {
+    padding: 25px 25px;
+    margin: 25px;
+}
+
+#header img {
+    height: 200px;
+    width: 200px;
+    border-radius: 30%;
+}
+
+#header span {
+    font-weight: bold;
+    font-size: 28px;
+    color: black;
+}
+
+/*------------------section-------------------*/
+
+section {
+    width: 60%;
+    float: left;
+}
+
+.company-name {
+    height: 3px;
+    color: blue
+}
+
+p {
+    color: teal
+}
+
+h2 p #aboutme {
+    margin: 10px;
+}
+
+h2 {
+    color: orangered;
+    font-style: bold;
+    font-size: 25px;
+    text-decoration: underline
+}
+
+p, h3, h2, .company-name, .job-responsibilities, .job-title, #aboutme {
+    margin: 20px;
+    padding: 0px;
+}
+
+.job-title, .course-name li {
+    font-weight: bold;
+}
+
+.course-name {
+    color: #cf455c;
+}
+
+.end-name {
+    color: black;
+}
+
+/*----------------------aside-------------------*/
+
+aside {
+    width: 40%;
+    float: right;
+    text-align: left;
+}
+.details strong{
+    color:#60204b;
+    font-weight: bold;
+    
+}
+.details p{
+    color:black;
+    font-style:normal;
+}
+
+h4 {
+    font-weight: bold;
+    color: brown;
+    text-align: left;
+    margin: 20px;
+}
+
+h5 {
+    text-align: left;
+    margin: 20px;
+}
+
+/*---------------footer------------*/
+
+#footer {
+    width: 100%;
+    text-align: center;
+    clear: both;
+    margin: 25px;
+    padding: 25px;
+}
+
+#footer p {
+    color: red;
+}
