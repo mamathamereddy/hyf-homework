@@ -159,6 +159,9 @@ footer {
     min-height: 400px;
     justify-content: space-between;
 }
+iframe{
+    border:0;
+}
 
 .findUs {
     font-weight: bold;
