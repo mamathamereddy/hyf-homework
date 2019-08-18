@@ -212,6 +212,13 @@ footer div h3 {
     footer {
         flex-direction: column;
     }
+    .logo,
+    #article,
+    .gallery-icons,
+    footer {
+        padding-left: 5%;
+        padding-right: 2%;
+    }
     /*media querie for logo or title*/
     .logo {
         height: 7em;
