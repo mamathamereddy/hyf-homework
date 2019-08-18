@@ -11,6 +11,7 @@
 .gallery-icons,
 footer {
     padding-left: 13%;
+    padding-right:2%;
     display: flex;
 }
 
