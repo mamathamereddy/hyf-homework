@@ -140,7 +140,8 @@ h3~p {
 }
 
 .logos img {
-    margin: 2em 2.5rem 3em 0em;
+    display: inline-block;
+    margin: .2em 2.5rem 1em 0em;
     width: 120px;
     height: 150px;
     line-height: 2px;
@@ -242,7 +243,7 @@ footer div h3 {
         padding-top: 0;
     }
     .logos img {
-        margin: 2em 1em 3em 0em;
+       margin: .2em 2.5rem 1em 0em;
     }
     /*media querie for footer*/
     footer .column:nth-child(2) {
