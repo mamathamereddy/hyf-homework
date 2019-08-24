@@ -184,7 +184,7 @@ footer div ul li {
 }
 
 footer div {
-    padding: 18px;
+    padding: 5px;
 }
 
 footer div h3 {
@@ -204,7 +204,7 @@ footer div h3 {
 
 /* Responsive for mobile screens(header/banner) */
 
-@media all and (max-width:600px) {
+@media all and (max-width:650px) {
     *,
     #top-nav ul,
     #article,
