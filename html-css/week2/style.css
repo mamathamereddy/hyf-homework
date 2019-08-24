@@ -222,7 +222,9 @@ footer div h3 {
     /*media querie for logo or title*/
     .logo {
         height: 7em;
-        width:100%
+        width:100%;
+        padding-right:0px;
+        margin-right:0px
     }
     .logo h1 {
         font-size: 3.5vw;
