@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Form3</title>
+</head>
+
+<body>
+    <main class="wrapper">
+        
+            <header>
+                    <div class="logo"><img src="./images/logo.png" alt=""></div>
+                    <nav><ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="form1.html">Signup</a></li>
+                            <li><a href="form2.html">Cart</a></li>
+                            <li><a href="form3.html">Payment</a></li>
+                          </ul>
+                        </nav>
+                </header>
+
+        
+        <!--page info/headder-->
+        <div class="pageinfo">
+            <h1> Sign up to yourcustomtailor.com </h1>
+            <h2>Step 4/4-Payment</h2>
+            <!--progressbar-->
+            <strong>Progress</strong>
+            <div class="progress">
+                <div class="bar" style="width: 95%"></div>
+            </div>
+            <p>Please fill in your payment data</p>
+        </div>
+
+        <!--input field-->
+        <div class="container">
+            <form>
+                <div class="fieldset">
+
+                    <label for="cardname"><span>Name of card</span> </label>
+                    <input type="text" class="name-field" id="cardname" required pattern="[A-Za-z]{3}" />
+                </div>
+                <div class="fieldset">
+                    <label for="cardtype"><span>Card type</span> </label>
+                    <select name="card-type" id="cardtype" class="input-field">
+                        <option value="IND">Dankort</option>
+                        <option value="AFG">Mastercard</option>
+                        <option value="AFG">Visa</option>
+                    </select>
+                </div>
+
+                <div class="fieldset">
+                    <label for="cardnumber"><span>Credit card number*</span> </label>
+                    <input type="tel"  id="cardnumber"  class="name-field" 
+                    pattern="\d{4}-?\d{4}-?\d{4}-?\d{4}" required
+                    title="Only numbers allowed, Exactly 16 digits.">
+
+                    <label for="firstname"><span>First Name*</span> </label>
+                    <input type="text" class="name-field" id="firstname" required />
+                </div>
+                <div class="fieldset">
+                    <label for="expirymonth"><span>Expiry month*</span> </label>
+                    <input type="month" id="expirymonth" class="box-field" required>
+
+                    <label for="number"><span>Expiry year*</span> </label>
+                    <input type="date" id="number" class="box-field" required>
+                </div>
+                <div class="fieldset">
+                    <label for="ccv"><span>CCV*</span> </label>
+                    <input type="tel" id="ccv" class="box-field" required maxlength="3"
+                    minlength="3" title="Only numbers. Exactly 3 digits.">
+                </div>
+
+                <div class="btn">
+                    <a href="form4.html"> Next</a>
+                </div>
+</form>
+        </div>
+        
+    </main>
+</body>
+
+</html>

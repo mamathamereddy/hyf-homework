@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Form1</title>
+</head>
+
+<body>
+    <main class="wrapper">
+            <header>
+                    <div class="logo"><img src="./images/logo.png" alt=""></div>
+                    <nav><ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="form1.html">Signup</a></li>
+                            <li><a href="form2.html">Cart</a></li>
+                            <li><a href="form3.html">Payment</a></li>
+                          </ul>
+                        </nav>
+                </header>
+
+        <!--info/hedder-->
+        <div class="pageinfo">
+            <h1> Sign up to yourcustomtailor.com </h1>
+            <h2>Step 2/4-How we can reach you?</h2>
+            <strong>Progress</strong>
+            <!--progressbar-->
+            <div class="progress">
+                <div class="bar" style="width: 40%"></div>
+            </div>
+            <p>We will probably need to stay in touch somehow. Let us know how we can reach you?</p>
+        </div>
+
+        <!--form with fieldset-->
+        <div class="container">
+            <form>
+                <div class="fieldset">
+                    <label for="email"><span>Email*</span></label>
+                    <input type="email" id="email" name="form2" required  pattern="/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/"
+                    title="abcd@abcd.com">
+
+                    <label for="phone"><span>Phone</span></label>
+                    <input type="text" id="phone" name="form2"  pattern="^\+(?:[0-9] ?){6,14}[0-9]$">
+                </div>
+                <div class="fieldset">
+                    <label for="pword"><span>Password*</span></label>
+                    <input type="password" id="pword" name="form2" required
+                        minlength="10" pattern="^(?=.*[a-z])(?=.*[A-Z])[a-zA-Z\d]{10,}$"
+                        title="Minimum 10 characters, uppercase and lowercase letters">
+                </div>
+                <div class="fieldset">
+                    <label for="rpword"><span>Re-enter Password*</span></label>
+                    <input type="password"  id="rpword" name="form2" required
+                        minlength="10" pattern="^(?=.*[a-z])(?=.*[A-Z])[a-zA-Z\d]{10,}$"
+                        title="Minimum 10 characters, uppercase and lowercase letters">
+                </div>
+
+
+                <!--newsletter/radio button-->
+
+                <p class="help-text">I want to sign up for the newsletter.</p>
+
+                
+                <input type="radio" id="wnews" class="radio" checked>
+                <label for="wnews"><span>Weekly news</span></label>
+
+                
+                <input type="radio" id="mnews" name="form2">
+                <label for="mnews"><span>Monthly news</span></label>
+
+               
+                <input type="radio" id="nonews" name="form2">
+                <label for="nonews"><span>Don't send me any news</span></label>
+
+                <div class="btn">
+                    <a href="form2.html"> Next step</a>
+                </div>
+            </form>
+        </div>
+    </main>
+</body>
+</html>

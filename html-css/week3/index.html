@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <title>form widgets</title>
+</head>
+
+<body>
+    <main class="wrapper">
+            <header>
+                    <div class="logo"><img src="./images/logo.png" alt=""></div>
+                    <nav><ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="form1.html">Signup</a></li>
+                            <li><a href="form2.html">Cart</a></li>
+                            <li><a href="form3.html">Payment</a></li>
+                          </ul>
+                        </nav>
+                </header>
+        <!--info/hedder-->
+
+        <div class="pageinfo">
+            <!--info/hedder-->
+            <h1>Sign up to yourcustomtailor.com</h1>
+            <p>we can't wait to help you improve your life-style and again the attention from people around you! </p>
+            <p>Sign up below to save upto 70% on apparel,hand-bags and cosmetics.our agents are busy picking the best
+                offer
+                that matches your preferences and styles .everyweek we will send you a hand-picked selection-we just
+                need to
+                know a few details about
+                you first.....
+            </p>
+            <h2>Step 1/4 -tell us who you are?</h2>
+            <!--progressbar-->
+            <strong>Progress</strong>
+            <div class="progress">
+                <div class="bar" style="width: 25%"></div>
+            </div>
+            <p> Nice to meet you. Let's spent a minute to know each other? Please enter the following</p>
+        </div>
+
+        <!--form-->
+
+        <div class="container">
+            <form>
+                <!--first and last names-->
+                <div class="fieldset">
+                    <label for="fname">First name*</label>
+                    <input type="text" id="fname" name="fname" required>
+
+                    <label for="lname">Last name*</label>
+                    <input type="text" id="lname" name="lname" required>
+                </div>
+                <!--dropdown or select-->
+                <div class="fieldset">
+                    <label for="country">Country*</label>
+                    <select class="select" id="country" name="country" required>
+                        <option value=""> Choose</option>
+                        <option value="Denmark">Denmark</option>
+                        <option value="India">India</option>
+                        <option value="UK">UK</option>
+                        <option value="U.S.A">U.S.A</option>
+                        <option value="Australia">Australia</option>
+                        <option value="Africa">Africa</option>
+                    </select>
+                </div>
+                <!--address-->
+                <div class="fieldset">
+                    <label for="stadr">Street address*</label>
+                    <input type="text" id="stadr" name="stadr" required>
+                    <label for="pcode">Post code*</label>
+                    <input type="text" id="pcode" name="postcode" required minlength="4" maxlength="4">
+                </div>
+                <!--profile textarea-->
+                <div class="fieldset">
+                    <label for="description">Profile description</label>
+                    <textarea id="description" name="description" class="textarea-field" maxlength="500" rows="5">
+                        </textarea>
+                </div>
+                <!--shipping address-->
+                <p class="sub-text "> Use the same address for billing and shipping? Uncheck below to fill out a saperate
+                    shipping
+                    address.
+                </p>
+
+                <label for="toggle"><strong class="ship">Shipping address</strong></label>
+                <input type="checkbox" id="toggle" name="toggle" checked>
+                <!--next button-->
+                <div class="btn">
+                    <a href="form1.html"> Next step</a>
+                </div>
+
+                <!--form-toggle-->
+                <div class="form-toggle">
+                    <p> </p>
+                    <div class="fieldset">
+                        <label for="f-name">First name*</label>
+                        <input type="text" id="f-name" name="f-name" required>
+
+                        <label for="l-name">Last name*</label>
+                        <input type="text" id="l-name" name="l-name" required>
+                    </div>
+                    <!--dropdown or select-->
+                    <div class="fieldset">
+                        <label for="county">Country*</label>
+                        <select class="select" id="county" name="county" required>
+                            <option value=""> Choose</option>
+                            <option value="Denmark">Denmark</option>
+                            <option value="India">India</option>
+                            <option value="UK">UK</option>
+                            <option value="U.S.A">U.S.A</option>
+                            <option value="Australia">Australia</option>
+                            <option value="Africa">Africa</option>
+                        </select>
+                    </div>
+                    <!--address-->
+                    <div class="fieldset">
+                        <label for="stadrr">Street address*</label>
+                        <input type="text" id="stadrr" name="stadrr" required>
+                        <label for="pcod">Post code*</label>
+                        <input type="text" id="pcod" name="postcod" required minlength="4" maxlength="4">
+                    </div>
+                    <!--profile textarea-->
+                   
+                </div>
+            </form>
+        </div>
+ </main>
+
+</html>
