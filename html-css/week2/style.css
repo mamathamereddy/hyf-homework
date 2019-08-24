@@ -155,50 +155,47 @@ h3~p {
 /*footer*/
 
 footer {
-    padding: 5px;
-    background-color: rgb(57, 57, 224);
-    color: white;
-    min-height: 400px;
+    background-color: #6735CD;
+    color: #f2f2f2;
+    display: flex;
     justify-content: space-between;
-}
-iframe{
-    border:0;
+    flex-wrap: wrap;
+    font-size: 1.2rem;
+    line-height: 2rem;
+    padding: 3em 0 6em 5em;
 }
 
-.findUs {
+footer .column {
+    flex: 1 1 200px;
+    padding: 1em;
+}
+
+footer .column a {
+    color:#f2f2f2;
+    text-decoration: none;
+}
+
+.column.archive,
+.column.nav {
     font-weight: bold;
 }
 
-.map {
-    max-width: 250px;
+.archive p,
+.nav li {
+    border-bottom: 1px solid #6F45C5;
+    padding: 0.8em 0;
+    max-width: 200px; /*same as flex-baseline*/
 }
 
-footer div h3~p {
-    color: white;
+.archive p:first-of-type {
+    padding: 0 0 0.8em;
 }
 
-footer div ul li {
-    list-style: none;
-    line-height: 50px;
-    border-bottom: 1px solid rgb(87, 73, 173);
-}
-
-footer div {
-    padding: 5px;
-}
-
-footer div h3 {
-    padding-bottom: 10px;
-}
-
-.aboutPage {
-    flex: 1 1 0;
-}
-
-.archives,
-.nav-bottom {
-    flex: 1 1 0;
-    padding-right: 20px;
+.nav li > ul > li {
+    border-bottom: none;
+    border-top: 1px solid #6F45C5;
+    padding: 0.8em 0 0;
+    margin: 0.8em 0 0 1em;
 }
 
 
