@@ -222,6 +222,7 @@ footer div h3 {
     /*media querie for logo or title*/
     .logo {
         height: 7em;
+        width:100%
     }
     .logo h1 {
         font-size: 3.5vw;
@@ -229,6 +230,7 @@ footer div h3 {
     }
     .logo p {
         font-size: 2vw
+           
     }
     /*media querie for navigation bar*/
     nav#top-nav ul li {
