@@ -14,7 +14,7 @@ if(housePriceEstimated<=actualHouseCost)
 const JuliaHousevolume=5*11*8;
 const JuliagardenSize=70;
 const HouseCost=1000000;
-//housePriceEstimated = JuliaHousevolume * 2.5 * 1000 + JuliagardenSize * 300;
+housePriceEstimated = JuliaHousevolume * 2.5 * 1000 + JuliagardenSize * 300;
 console.log("\nJulia house estimated price: "+housePriceEstimated);
 console.log("Julia spend on buying house: "+HouseCost);
 
