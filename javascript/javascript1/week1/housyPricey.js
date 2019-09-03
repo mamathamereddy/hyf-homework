@@ -1,25 +1,19 @@
 const PeterHousevolume=8*10*10;
-const PetergardenSize=100;
-const actualHouseCost=2500000;
-const housePriceEstimated = PeterHousevolume * 2.5 * 1000 + PetergardenSize * 300;
-console.log("\nPeterhouse estimated price: "+housePriceEstimated);
-console.log("Peter spend on buying house: "+actualHouseCost);
+const volumeInMeters = [8*10*10,5*11*8];
+const gardenSizeInM2 = [100,70];
+const housePricePeter = volumeInMeters[0] * 2.5 * 1000 + gardenSizeInM2[0] * 300;
+const housePriceJulia = volumeInMeters[1] * 2.5 * 1000 + gardenSizeInM2[1] * 300;
 
-if(housePriceEstimated<=actualHouseCost)
-  console.log("Peter brought the house in  expensive ");
-  else
-  console.log("Peter brought the house in  low price");
+if (housePricePeter < 2500000) {
+    console.log("House is too expensive, Peter");
+}
+else {
+    console.log("Great price for the house, Peter");
+}
 
-
-const JuliaHousevolume=5*11*8;
-const JuliagardenSize=70;
-const HouseCost=1000000;
-const PriceEstimated= JuliaHousevolume * 2.5 * 1000 + JuliagardenSize * 300;
-console.log("\nJulia house estimated price: "+PriceEstimated);
-console.log("Julia spend on buying house: "+HouseCost);
-
-if(housePriceEstimated<=actualHouseCost)
-  console.log("julia brought the house in low price ");
-  else
-  console.log("Julia  brought the house in expensive");
-
+if (housePriceJulia < 1000000) {
+    console.log("House is too expensive, Julia");
+}
+else {
+    console.log("Great price for the house, Julia");
+}
