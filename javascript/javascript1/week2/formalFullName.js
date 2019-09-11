@@ -1,5 +1,8 @@
 function getFullName(firstName,surName,useFormalName){
- if(useFormalName){
+ if(!firstname || !surname)  {
+      return "Missing name";
+  }
+ else if(useFormalName){
     return "Lord "+ firstName+" "+ surName;
   }
     return  firstName+" "+ surName;
