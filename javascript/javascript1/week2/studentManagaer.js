@@ -21,12 +21,14 @@ function getNumberOfStudents() {
 
 addStudentToClass('Machile');
 addStudentToClass('Maria');
-//addStudentToClass('Maria');
-//addStudentToClass('');
-//addStudentToClass('Queen');
 addStudentToClass('Rishi');
 addStudentToClass('Manoha');
-//addStudentToClass('Janne');
-//addStudentToClass('Jan');
+addStudentToClass('Janne');
+addStudentToClass('Jumni');
+addStudentToClass('Queen');
+//addStudentToClass('Mamatha');
+//addStudentToClass('');
+//addStudentToClass('Maria');
 
+console.log(class07Students);
 console.log(getNumberOfStudents());

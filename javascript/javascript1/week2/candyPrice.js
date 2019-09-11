@@ -1,6 +1,7 @@
 
 let boughtCandyPrices=[]
 function addCandy(candyType,weight){
+  let price=0
   if (candyType === 'Sweet'){
        price = 0.5;
      } 
@@ -27,15 +28,9 @@ console.log("Amount you have:"+amountToSpend);
 
 function canBuyMoreCandy(){
   let total = 0;
-    /*for ( let i = 0; i< boughtCandyPrices.length; i++)
+    for ( let i = 0; i< boughtCandyPrices.length; i++)
      {
       total +=  boughtCandyPrices[i]; 
-     }*/
-
-     let i=0
-     while(i< boughtCandyPrices.length){
-      total +=  boughtCandyPrices[i];
-      i++;
      }
      console.log("total amount spend:"+total);
 
