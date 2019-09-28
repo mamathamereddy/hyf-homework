@@ -4,8 +4,8 @@ const favDish = [];
 const events = [];
 
 function getReply (command) {
-  //const command = command.toLowerCase();
   //Returning and wishing with name
+  
   if (command.includes ('Hello my name is ')) {
     if (name) {
       return name + ' is already given';
