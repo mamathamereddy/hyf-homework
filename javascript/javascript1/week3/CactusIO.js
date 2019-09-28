@@ -18,23 +18,38 @@ addActivity('LinkedIn', 15);
 console.log(activities);
 
 // ShowStatus
-let sum =0 ;
-const usageLimit =  80;
+
+function durationSummary() {
+    let sumDuration = 0;
+
+    for (let i = 0; i < activities.length; i++) {
+        sumDuration += activities[i].duration;
+    }
+    return sumDuration;
+}
+
 function showStatus() {
-    for(let i =0 ; i < activities.length ; i++){
-            sum +=  activities[i].duration;
-    }  
-    if(sum > usageLimit) {
-      return("You have reached your limit, no more smartphoning for you!")
- } else {
-     
-   return "You have added "+activities.length +" activities.They amount to " +sum +" min. of usage"; 
- }
- }
+
+    if (activities.length === 0) {
+        return "Add some activities before calling showStatus";
+    } else {
+        return "You have added "+activities.length+ " activities. They amount to"+durationSummary()+"  min of usage.";
+    }
+}
 
 console.log(showStatus());
 
-//  Showing the number of actitivies for that specific day
+
+function showStatusLimit(limit) {
+    //durationSummary();
+    if (durationSummary() >= limit) {
+        return "You have reached your limit, no more smartphoning for you!";
+    }
+}
+
+console.log(showStatusLimit(300));
+
+//  Showipush ung the number of actitivies for that specific day
 const activityByDate= [] ;
 const today  = new Date();
 function addActivityByDate (date) {
