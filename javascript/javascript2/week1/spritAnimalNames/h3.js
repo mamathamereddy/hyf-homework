@@ -1,3 +1,6 @@
+document.body.style.background="#E4A336"
+document.body.style.textAlign="center"
+document.body.style.fontSize = '1.3em';
 
 //creating tag h1
 const h1 = document.createElement ('h1');
@@ -14,10 +17,13 @@ document.body.appendChild (inputbox);
 const button = document.createElement ('button');
 button.innerHTML = 'click';
 document.body.appendChild (button);
+button.style.width="100px"
 
 //creating p tag
 const p = document.createElement ('p');
 document.body.appendChild (p);
+
+document.write("Select when the event should occur ")
 
 //creating select
 const select = document.createElement ('select');
@@ -58,6 +64,10 @@ const spiritAnimalName = [
   'The Hardworking Honeybee',
   'The Loyal Dog',
 ];
+
+if (!inputbox.value) {
+ p.textContent = 'please enter your Name';
+}
 //event types------on button click(changing spritnames)
 button.addEventListener ('click', function () {
   if (select.value === 'click' && inputbox.value) {
@@ -89,11 +99,8 @@ inputbox.addEventListener ('input', function () {
 function spiritAnimalNameGen () {
   const randomIndex =
     spiritAnimalName[Math.floor (Math.random () * spiritAnimalName.length)];
-  if (!inputbox.value) {
-    return (p.textContent = 'please enter your Name');
-  } else {
-    return (p.textContent = inputbox.value + ' - ' + randomIndex);
-  }
+    return p.textContent = inputbox.value + ' - ' + randomIndex;
+  
 }
 
 
