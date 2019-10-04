@@ -85,8 +85,7 @@ inputbox.addEventListener ('mouseover', function () {
 });
 
 //when texting in input field(not changing spritnames )
-const randomIndex =
-  spiritAnimalName[Math.floor (Math.random () * spiritAnimalName.length)];
+const randomIndex =spiritAnimalName[Math.floor (Math.random () * spiritAnimalName.length)];
 inputbox.addEventListener ('input', function () {
   if (select.value === 'input' && inputbox.value) {
     button.hidden = true;
