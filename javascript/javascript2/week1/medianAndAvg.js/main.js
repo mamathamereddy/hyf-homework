@@ -11,7 +11,6 @@ const housePrices = [
 ];
 function average (prices) {
   let sum = 0;
-
   for (i = 0; i < prices.length; i++) {
     sum += prices[i];
   }
@@ -20,15 +19,14 @@ function average (prices) {
 }
 //console.log("The Average of houseprices is: " + average(housePrices));
 
+
 //median of the parameter
 function median (numbers) {
   let numsLen = numbers.length;
   numbers.sort ();
-  if (numsLen % 2 === 0) {
-    // is even
+  if (numsLen % 2 === 0) {        // is even
     median = (numbers[numsLen / 2 - 1] + numbers[numsLen / 2]) / 2; // average of two middle numbers
-  } else {
-    // is odd
+  } else {         // is odd
     median = numbers[(numsLen - 1) / 2]; // middle number only
   }
   return median;
@@ -45,6 +43,7 @@ function findAverageAndMedian (prices) {
 }
 let averageAndMedian = findAverageAndMedian (housePrices);
 console.log (averageAndMedian);
+
 
 //render the prices and the average and median in a web page.
 const ul = document.getElementById ('housePrices');
