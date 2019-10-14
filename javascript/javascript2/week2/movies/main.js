@@ -45,6 +45,32 @@ const avgRating = movies.reduce ((acc, item) => acc + item.rating / movies.lengt
 console.log ('Average rating of all movies is:', avgRating);
 
 // 10.Total number of good movies
+const countTotalNumber = movies.reduce(
+  (acc, movie) => {
+    if (movie.tag === 'Good') {
+      acc.good += 1;
+    } else if (movie.tag === 'Average') {
+      acc.average += 1;
+    } else {
+      acc.bad += 1;
+    }
+    return {
+      ...acc
+    };
+  }, {
+    good: 0,
+    average: 0,
+    bad: 0
+  }
+);
+
+console.log(countTotalNumber);
+
+
+
+
+
+/*working 
 const goodMovies = movies.map (item => item.tag === 'Good');
 const totalGoodmovies = goodMovies.reduce ((acc, item) => acc + item);
 console.log ('Total no.of Good Movies are:', totalGoodmovies);
@@ -58,7 +84,7 @@ const totalBadmovies = badmovies.reduce ((acc, item) => acc + item);
 console.log ('Total no.of Bad Movies are:', totalBadmovies);
 
 /*
-//or// 10.Total number of good movies
+//or// 10.Total number of good movies(working)
 const totalGoodmovies=movies.reduce((acc,item)=> item.tag==='Good' ? acc += 1 : acc,0)
 console.log(totalGoodmovies)
 
