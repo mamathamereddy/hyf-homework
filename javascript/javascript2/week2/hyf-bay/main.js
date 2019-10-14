@@ -51,5 +51,18 @@ function selectOption () {
   }
 }
 
+//Showing products that ships to country
+let countrySelect = document.querySelector ('.country select');
+countrySelect.addEventListener ('change', function () {
+  let selectedCountry = countrySelect.value.toUpperCase ();
+  let selectByCountry = products.filter (product => {
+    for (let i = 0; i < product.shipsTo.length; i++) {
+      return product.shipsTo[i].toUpperCase ().includes (selectedCountry);
+    }
+  });
+  renderProducts (selectByCountry);
+});
+
+
 
 
