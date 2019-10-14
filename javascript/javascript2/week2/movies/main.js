@@ -16,7 +16,7 @@ console.log ('number of movies made between 1980-1989 including both the years:'
 const extraTag = movies.forEach (item => {
   if (item.rating >= 7) {
     item.tag = 'Good';
-  } else if (item.rating >= 4 && item.rating < 7) {
+  } else if (item.rating < 7 && item.rating >= 4) {
     item.tag = 'Average';
   } else {
     item.tag = 'Bad';
