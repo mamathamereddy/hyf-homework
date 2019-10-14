@@ -25,7 +25,7 @@ function median (numbers) {
   let numsLen = numbers.length;
   numbers.sort ();
   if (numsLen % 2 === 0) {        // is even
-    median = (numbers[numsLen / 2 - 1] + numbers[numsLen / 2]) / 2; // average of two middle numbers
+    median = prices[((pricesLength / 2) + ((pricesLength / 2) - 1)) / 2]; // (n/2 + (n/2)-1) / 2 // average of two middle numbers
   } else {         // is odd
     median = numbers[(numsLen - 1) / 2]; // middle number only
   }

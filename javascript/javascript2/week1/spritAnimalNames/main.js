@@ -31,7 +31,7 @@ select.setAttribute ('id', 'select-option');
 document.body.appendChild (select);
 
 //for option and values
-const values = [
+const optionValues = [
   {
     value: 'click',
     text: 'click the button',
@@ -46,10 +46,10 @@ const values = [
   },
 ];
 
-for (var i = 0; i < values.length; i++) {
+for (var i = 0; i < optionValues.length; i++) {
   const option = document.createElement ('option');
-  option.setAttribute ('value', values[i].value);
-  option.textContent = values[i].text;
+  option.setAttribute ('value', optionValues[i].value);
+  option.textContent = optionValues[i].text;
   select.appendChild (option);
 }
 
