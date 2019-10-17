@@ -34,6 +34,21 @@ function filterForSearchInput () {
 }
 
 
+//Showing products that ships to country
+const countrySelect = document.querySelector ('.country select');
+countrySelect.addEventListener ('change', selectCountry)
+
+function selectCountry () {
+  const selectedCountry = countrySelect.value.toLowerCase ().trim ();
+  const matchedCountry = products.filter (product => {
+    for (let i = 0; i < product.shipsTo.length; i++) {
+      return product.shipsTo[i].toLowerCase ().includes (selectedCountry);
+    }
+  })
+  renderProducts (matchedCountry);
+}
+
+
 //Select sorting options
 const sortOptions = document.querySelector ('.sort select');
 sortOptions.addEventListener ('change', selectOption);
@@ -51,19 +66,7 @@ function selectOption () {
   }
 }
 
-//Showing products that ships to country
-const countrySelect = document.querySelector ('.country select');
-countrySelect.addEventListener ('change', selectCountry)
 
-function selectCountry () {
-  const selectedCountry = countrySelect.value.toUpperCase ();
-  const matchedCountry = products.filter (product => {
-    for (let i = 0; i < product.shipsTo.length; i++) {
-      return product.shipsTo[i].toUpperCase ().includes (selectedCountry);
-    }
-  })
-  renderProducts (matchedCountry);
-}
 
 
 

@@ -74,6 +74,8 @@ button.addEventListener ('click', function () {
     spiritAnimalNameGen ();
   }
 });
+
+
 //event types------onmouseover(changing spritnames)
 inputbox.addEventListener ('mouseover', function () {
   if (select.value === 'hover' && inputbox.value) {
@@ -96,8 +98,7 @@ inputbox.addEventListener ('input', function () {
 });
 
 function spiritAnimalNameGen () {
-  const randomIndex =
-    spiritAnimalName[Math.floor (Math.random () * spiritAnimalName.length)];
+  const randomIndex =spiritAnimalName[Math.floor (Math.random () * spiritAnimalName.length)];
     return p.textContent = inputbox.value + ' - ' + randomIndex;
   
 }

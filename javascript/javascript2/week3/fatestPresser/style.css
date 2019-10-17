@@ -1,0 +1,65 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  text-align: center;
+}
+
+/*headding*/
+h2 {
+  color: #ff9900;
+  font-family: 'Pacifico', 'cursive';
+  font-size: 3em;
+  text-align: center;
+  margin: 10px 0;
+}
+
+/*input box*/
+#input {
+  margin: 0 auto;
+  width: 300px;
+  font-size: 1.1em;
+  margin: 10px 0 0;
+  padding: 5px;
+}
+
+/*start &restart button*/
+#btn1,
+#btn2 {
+  background: #3ece8e;
+  color: #fff;
+  font-size: 1em;
+  font-weight: bold;
+  margin-top: 25px;
+  margin-bottom: 5px;
+  padding: 10px;
+}
+
+section {
+  min-height: 50vh;
+  margin: 30px auto;
+  position: relative;
+  width: 70%;
+}
+
+/* left and right panels or div's*/
+.right,
+.left {
+  border-top: 1px solid black;
+  float: left;
+  min-height: 50vh;
+  padding-top: 40px;
+  position: relative;
+  text-align: center;
+  width: 50%;
+}
+
+section div+div {
+  border-left: 1px solid black;
+}
+#text-p{
+  color: red;
+  font-size: 1.5em;
+  font-family: 'Pacifico', 'cursive';
+}
