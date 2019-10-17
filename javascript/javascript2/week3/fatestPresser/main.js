@@ -34,8 +34,7 @@ button.addEventListener ('click', function () {
   function pressed (e) {
     let key = e.key.toLowerCase ();
     if (input.value) {
-      if (key === 's') {
-        //counter for how many times l and s was pressed.
+      if (key === 's') {          //counter for how many times l and s was pressed.
         scount++;
         s.textContent = scount;
       } else if (key === 'l') {
