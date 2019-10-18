@@ -11,27 +11,34 @@
 </head>
 
 <body>
-  <main>
+  <main id="myForm">
     <h2>Fastest presser</h2>
     <input type="number" id="input" placeholder="Set seconds">
     <div class="input">
       <button id="btn1" type="button">Start game!</button>
-      <button id="btn2" type="button">Restart</button>
+      
       <p id="text-p"></p>
     </div>
+
     <section>
       <div class="left">
         <h4>Press S</h4>
         <p id="S-count"></p>
         <p id="S-result"></p>
+        <canvas id="my-canvas-s"></canvas>
       </div>
+
       <div class="right">
         <h4>Press L</h4>
         <p id="L-count"></p>
         <p id="L-result"></p>
+        <canvas id="my-canvas-l"></canvas>
       </div>
+      <canvas id="canvas-section"></canvas>
     </section>
+    <button id="btn2" type="button">Restart</button>
   </main>
+  <script src="confetti.js"></script>
   <script src="main.js"></script>
 </body>
 

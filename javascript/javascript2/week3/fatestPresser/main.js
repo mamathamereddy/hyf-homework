@@ -19,11 +19,21 @@ button.addEventListener ('click', function () {
   function selectWinner () {
     if (scount > lcount) {
       sresult.textContent = 'won the game';
+      const confettiSettings = { target: 'my-canvas-s' };
+      const confetti = new ConfettiGenerator(confettiSettings);
+      confetti.render();
     } else if (lcount > scount) {
       lresult.textContent = 'won the game';
+      const confettiSettings = { target: 'my-canvas-l' };
+      const confetti = new ConfettiGenerator(confettiSettings);
+      confetti.render();
     } else if ((lcount = scount)) {
       sresult.textContent = 'The game is draw';
       lresult.textContent = 'The game is draw';
+      const confettiSettings = { target: 'canvas-section' };
+      const confetti = new ConfettiGenerator(confettiSettings);
+      confetti.render();
+      
     }
     document.removeEventListener ('keypress', pressed);
   }
@@ -34,7 +44,8 @@ button.addEventListener ('click', function () {
   function pressed (e) {
     let key = e.key.toLowerCase ();
     if (input.value) {
-      if (key === 's') {          //counter for how many times l and s was pressed.
+      if (key === 's') {
+        //counter for how many times l and s was pressed.
         scount++;
         s.textContent = scount;
       } else if (key === 'l') {

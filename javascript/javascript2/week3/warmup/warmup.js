@@ -30,7 +30,7 @@ button1.addEventListener ('click', function () {
 }
 button1.addEventListener('click',delay)   */
 
-//4.loggingout planes when function is called
+//4.loggingout planets when function is called
 const earthLogger = () => console.log ('Earth');
 const saturnLogger = () => console.log ('Saturn');
 
@@ -75,17 +75,15 @@ function map (lat, lng) {
 
 
 //8.doubleclick
-document.addEventListener('dblclick',()=>{
-  console.log("double click!"); 
-});
+document.addEventListener('dblclick',()=>console.log("double click!"));
 
 //9.joke creater
 function jokeCreator (tellFunnyJoke, logFunnyJoke, logBadJoke) {
-  if (tellFunnyJoke === true) {
+  if (tellFunnyJoke) {
     logFunnyJoke ();
-  } else if (tellFunnyJoke === false) {
+  } else{
     logBadJoke ();
-  } else console.log ('check your input');
+  }
 }
 
 function logFunnyJoke () {
