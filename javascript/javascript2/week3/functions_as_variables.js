@@ -23,7 +23,7 @@ array.forEach (item => item ());
 const constFunction = () => {
   const firstname = "Mamatha";
   const lastName = "Mereddy";
-  console.log("user FullName : " + firstname + " " + lastName + "------" + 'I am from function as');
+  console.log("user FullName : " + firstname + " " + lastName + "------" + 'I am from function as a const');
 };
 
 function normalFunction() {
