@@ -6,7 +6,6 @@ const msg=document.getElementById('errorMsg')
 
 button.addEventListener ('click', () => {
   if (input.value) {
-   
     const cityName = input.value.toLowerCase ();
     url ='https://api.openweathermap.org/data/2.5/weather?q=' + cityName +'&appid=466d6f0408c2efb79f1b29ae4e788b81';
     fetch (url)
