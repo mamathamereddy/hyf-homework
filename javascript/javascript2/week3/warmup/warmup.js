@@ -66,7 +66,7 @@ function map (lat, lng) {
 }
 
  //7. function with different delays and different callback functions
-  function runAfterDelay(delay,callback){
+ function runAfterDelay(delay,callback){
     setTimeout(callback(),delay*1000)
   }
   runAfterDelay(4,function(){
