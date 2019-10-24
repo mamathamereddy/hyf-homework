@@ -60,7 +60,7 @@ function renderCityWeatherInfo (data) {
   //console.log(lat)
   //console.log(lng)
   function initMap (lat, lng) {
-    var coords = new google.maps.LatLng (lat, lng);
+    const coords = new google.maps.LatLng (lat, lng);
     map = new google.maps.Map (document.getElementById ('map'), {
       zoom: 12,
       center: coords,
