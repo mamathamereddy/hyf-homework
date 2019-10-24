@@ -7,10 +7,9 @@ btn.addEventListener('click', () => {
   if (input.value) {
     const gifName = input.value.toLowerCase();
     if (totalGifs.value) {
-     
-      url='https://api.giphy.com/v1/gifs/search?q=' +   gifName  +  '&limit=' +  totalGifs.value +  '&api_key=HCRI89ixujLx2ZrfrZEmkrItQzVetl68'
+      url='https://api.giphy.com/v1/gifs/search?q=' +gifName+'&limit=' +totalGifs.value +'&api_key=HCRI89ixujLx2ZrfrZEmkrItQzVetl68'
     } else {
-      url='https://api.giphy.com/v1/gifs/search?q=' +  gifName  +  '&api_key=HCRI89ixujLx2ZrfrZEmkrItQzVetl68'
+      url='https://api.giphy.com/v1/gifs/search?q=' +gifName+'&api_key=HCRI89ixujLx2ZrfrZEmkrItQzVetl68'
     }
     fetch(url)
     .then(respnse=>respnse.json())
