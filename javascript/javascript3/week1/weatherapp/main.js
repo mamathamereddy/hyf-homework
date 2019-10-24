@@ -16,7 +16,6 @@ button.addEventListener ('click', () => {
   } else {
     msg.innerHTML='Please enter the city';
     return false;
- 
   }
 });
 
@@ -71,7 +70,6 @@ function renderCityWeatherInfo (data) {
   initMap (lat, lng);
   document.querySelector ('#display_data').style.visibility = 'visible';
   //document.getElementById('map').innerHTML = `<div style="width: 100%"><iframe width="650" height="500" src="https://maps.google.com/maps?q=${data.name}&t=&z=11&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe></div>`;
-
 }
 
 
