@@ -54,8 +54,7 @@ function renderCityWeatherInfo (data) {
   sunrise.innerHTML ='Sunrise:' + new Date (data.sys.sunrise * 1000).toLocaleTimeString ();
 
   const sunset = document.getElementById ('sunset');
-  sunset.innerHTML =
-    'Sunset:' + new Date (data.sys.sunset * 1000).toLocaleTimeString ();
+  sunset.innerHTML ='Sunset:' + new Date (data.sys.sunset * 1000).toLocaleTimeString ();
 
   //Map showing where the city is located
   const lat = data.coord.lat;
@@ -70,10 +69,8 @@ function renderCityWeatherInfo (data) {
     });
   }
   initMap (lat, lng);
-  
-
-//document.getElementById('map').innerHTML = `<div style="width: 100%"><iframe width="650" height="500" src="https://maps.google.com/maps?q=${data.name}&t=&z=11&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe></div>`;
-document.querySelector ('#display_data').style.visibility = 'visible'; 
+  document.querySelector ('#display_data').style.visibility = 'visible';
+  //document.getElementById('map').innerHTML = `<div style="width: 100%"><iframe width="650" height="500" src="https://maps.google.com/maps?q=${data.name}&t=&z=11&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe></div>`;
 
 }
 
@@ -100,8 +97,7 @@ function getWeather (lat, long) {
   //console.log (api);
   fetch (api).then (response => response.json ())
   .then (data => {
-           data.name;            //output's only  current position location name
-
+           data.name;//output's only  current position location name
     //Rendering current position weather
     url ='https://api.openweathermap.org/data/2.5/weather?q=' +data.name +'&appid=466d6f0408c2efb79f1b29ae4e788b81';
     fetch (url)
