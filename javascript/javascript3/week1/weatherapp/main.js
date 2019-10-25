@@ -70,7 +70,7 @@ function renderCityWeatherInfo (data) {
   document.querySelector ('#display_data').style.visibility = 'visible';
   //document.getElementById('map').innerHTML = `<div style="width: 100%"><iframe width="650" height="500" src="https://maps.google.com/maps?q=${data.name}&t=&z=11&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe></div>`;
 }
-
+/*-------------------------optional work-----------*/
 
 //Getting current position(optional)
 const btn2 = document.querySelector ('#geoLoc');
@@ -82,13 +82,11 @@ btn2.addEventListener ('click', () => {
     alert = "browser doesn't support";
   }
 });
-
 function myPosition (position) {
   const lat = position.coords.latitude;
   const long = position.coords.longitude;
   getWeather (lat, long);
 }
-
 function getWeather (lat, long) {
   const api = 'https://api.openweathermap.org/data/2.5/weather?lat=' + lat + '&lon=' + long + '&appid=466d6f0408c2efb79f1b29ae4e788b81';
   //console.log (api);
