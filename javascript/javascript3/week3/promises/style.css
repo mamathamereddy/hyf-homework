@@ -1,0 +1,16 @@
+*{
+  font-family: Arial, Helvetica, sans-serif;
+  list-style: none;
+}
+  #result ul li  {
+    margin-top: 20px;
+    font-size: 1.2em;
+    color:#ff0000;
+  }
+
+
+#result ul li ul li {
+  margin: 10px;
+  font-size: 0.9em; 
+  color:lightseagreen
+}
