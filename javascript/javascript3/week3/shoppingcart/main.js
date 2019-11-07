@@ -47,17 +47,14 @@ class ShoppingCart {
   }
 
   getTotal () {
-    const totalPrice = this.products.reduce (
-      (acc, product) => acc + product.price,
-      0
-    );
+    const totalPrice = this.products.reduce ((acc, product) => acc + product.price,0);
     console.log ('totalPrice is:' + totalPrice);
     return totalPrice;
   }
 
   renderProducts () {
     const outputDiv = document.getElementById ('output');
-    //outputDiv.innerHTML = '';
+    outputDiv.innerHTML = '';
     const p = document.createElement ('p');
     p.textContent = `Your cart products list and prices`;
     outputDiv.appendChild (p);

@@ -10,8 +10,8 @@ class Circle {
   }
   //draw circle on the canvas  and fill it
   draw () {
-    var c = document.getElementById ('myCanvas');
-    var ctx = c.getContext ('2d');
+    const c = document.getElementById ('myCanvas');
+    const ctx = c.getContext ('2d');
     ctx.beginPath ();
     ctx.arc (this.x, this.y, this.radius, this.startAngle, this.endAngle);
     ctx.fillStyle = this.fillColor;
@@ -29,7 +29,9 @@ const y = function () {
 const radius = function () {
   return Math.floor (Math.random () * 30);
 };
+
 const colours = ['#472b62','#9be3de','#fb5b5a','#fb5b5a','#4dd599','#f1fa3c','#94aa2a','#0c093c','#6b591d','#ff4d00',];
+
 const fillStyle = function () {
   return colours[Math.floor (Math.random () * colours.length)];
 };
