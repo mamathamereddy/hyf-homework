@@ -4,7 +4,7 @@
 --2)Find out how many tasks in the task table do not have a valid due date
      SELECT COUNT(id)
      FROM task
-     WHERE  due_date is  null;
+     WHERE  due_date IS null;
 
 --3)Find all the tasks that are marked as done
     SELECT * 
@@ -34,12 +34,12 @@
 --8)Get the title and status (as text) of all tasks
     SELECT task.title,status.name AS status
     FROM task
-    INNER JOIN  status on task.status_id=status.id;
+    INNER JOIN  status ON task.status_id=status.id;
 
 --9)Get the name of each status, along with a count of how many tasks have that status
     SELECT status.name AS status,count(task.title) AS count_tasks
     FROM task
-    INNER JOIN status on task.status_id=status.id 
+    INNER JOIN status ON task.status_id=status.id 
     GROUP BY status_id;
 
 --10)Get the names of all statuses, sorted by the status with most tasks first
