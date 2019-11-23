@@ -1,8 +1,7 @@
 -- Add a task with the these attributes: title, description, created, updated, dueDate, statusID, userID
 INSERT INTO task (title, description, created, updated, due_date, status_id, user_id)
- VALUES ('learn to code','data bases deletion',now(),now(),'2019-12-22 20:58:03',1,7);
- VALUES ('learn ract ','component creation',now(),now(),'2019-12-31 23:58:03',1,9);
- VALUES ('learn node ','api creation',now(),now(),'2020-1-31 23:58:03',2,3);
+ VALUES ('learn to code','data bases deletion',now(),now(),'2019-12-22 20:58:03',1,7),
+ VALUES ('learn node ','api creation',now(),now(),'2020-1-31 23:58:03',2,3),
  VALUES ('JavaScript','learn to build apps with js',now(),now(),'2019-11-21 20:58:03',2,6);
  SELECT * FROM task;
 

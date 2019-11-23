@@ -19,6 +19,7 @@ CREATE TABLE `class` (
 CREATE TABLE `student` (
 	`id` INT(10) UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
 	`name` VARCHAR(255) NOT NULL,
+	`email` varchar(255) NOT NULL,
 	`phone` VARCHAR(255) NOT NULL,
 	`class_id`INT(10) UNSIGNED NOT NULL,
   CONSTRAINT `fk_class` FOREIGN KEY (`class_id`) 
@@ -33,4 +34,4 @@ ON student (name);
 -- Add a new column to the class table named status which can only have the following values:
 -- not-started, ongoing, finished (hint: enumerations).
 ALTER TABLE class 
-ADD COLUMN status ENUM('not-started', 'ongoing', 'finished');
+ADD  status ENUM('not-started', 'ongoing', 'finished');
