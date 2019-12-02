@@ -6,18 +6,18 @@ SET NAMES utf8mb4;
 CREATE TABLE `Meal` (
 	`id` INT UNSIGNED NOT NULL AUTO_INCREMENT,
 	`title` VARCHAR(255) NOT NULL,
-    `description` TEXT DEFAULT NULL,
+    `description` TEXT,
     `location` VARCHAR(255) NOT NULL,
     `when` DATETIME NOT NULL,
     `max_reservations`  INT,
-    `price` DECIMAL(10,2),
+    `price` DECIMAL(10,2) NOT NULL,
 	`created_date` DATE NOT NULL,
      PRIMARY KEY(id)
 )ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 CREATE TABLE Reservation(
  `id` INT UNSIGNED NOT NULL AUTO_INCREMENT,
- `number_of_guests` INT Null DEFAULT NULL,
+ `number_of_guests` INT NULL DEFAULT NULL,
  `meal_id` INT UNSIGNED NOT NULL ,
  `created_date` DATE NOT NULL,
   PRIMARY KEY(id),
@@ -29,7 +29,7 @@ CREATE TABLE Review(
  `title` VARCHAR(255) NOT NULL,
  `description` TEXT DEFAULT NULL,
  `meal_id` INT UNSIGNED NOT NULL ,
- `stars` INT NOT NULL,
+ `stars` INT UNSIGNED NOT NULL,
  `created_date` DATE NOT NULL,
   PRIMARY KEY(id),
  FOREIGN KEY (meal_id) REFERENCES Meal(id) ON DELETE CASCADE
@@ -175,7 +175,7 @@ FROM Meal
 LIMIT 5;
 
 -- Get the meals that have good reviews
-SELECT * 
+SELECT meal.id,meal.title,review.meal_id
 FROM Meal 
 INNER JOIN Review 
 ON Meal.id = Review.meal_id
@@ -194,5 +194,6 @@ FROM Meal
 INNER JOIN Review 
 ON Meal.id = Review.Meal_id 
 GROUP BY Meal.title
-ORDER BY Review.stars;
+ORDER BY AVG(Review.stars);
+-- ORDER BY avg_review;
   
