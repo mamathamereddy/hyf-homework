@@ -9,7 +9,7 @@ CREATE TABLE `Meal` (
     `description` TEXT,
     `location` VARCHAR(255) NOT NULL,
     `when` DATETIME NOT NULL,
-    `max_reservations`  INT,
+    `max_reservations`  INT UNSIGNED NOT NULL ,
     `price` DECIMAL(10,2) NOT NULL,
 	`created_date` DATE NOT NULL,
      PRIMARY KEY(id)
