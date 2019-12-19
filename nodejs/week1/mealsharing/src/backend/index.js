@@ -1,5 +1,6 @@
 const express = require ('express');
 const app = express ();
+const fs = require ('fs');
 
 // make a middleware the logs the the date and the request's method, each time the server gets a request
 app.use ((req, res, next) => {
@@ -7,6 +8,7 @@ app.use ((req, res, next) => {
   console.log ('Request method:', req.method);
   next ();
 });
+
 
 const meals = require ('./routes/meals.js');
 app.use ('/meals', meals);
@@ -25,6 +27,10 @@ app.use ('/reservations', reservations);
 
 const reservation = require ('./routes/reservation.js');
 app.use ('/reservation', reservation);
+
+// Add reviews to the meals
+
+
 
 app.get ('/', (req, res) => res.send ('Error no page found'));
 

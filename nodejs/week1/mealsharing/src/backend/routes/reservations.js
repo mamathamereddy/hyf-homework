@@ -7,6 +7,6 @@ const reservation = fs.readFileSync ( __dirname + '/../data/reservation.json', '
 
 // get the list of reservation from bd
 app.get ('/', (req, res) => {
-  res.json (reservation);
+  res.send(reservation);
 });
 module.exports = app;

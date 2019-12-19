@@ -13,17 +13,11 @@ app.get ('/', (request, response) => {
   response.json (meals);
 });
 
-// Add reviews to the meals
+// Add reviews
 const dataReview = fs.readFileSync (__dirname + '/../data/review.json', 'utf8');
 const reviews = JSON.parse (dataReview);
-
 meals.forEach (meal => {
-  meal.review = [];
-  for (let review of reviews) {
-    if (meal.id === review.meal_id) {
-      meal.review.push (review);
-    }
-  }
-});
+  meal.reviews = reviews.filter(review => review.mealId === meal.id);
+}); 
 
 module.exports = app;
