@@ -4,8 +4,7 @@ const mysql = require("mysql");
 
 require("dotenv").config();
 
-//const pool = mysql.createPool({
-const pool = mysql.createConnection({
+const pool = mysql.createPool({
   connectionLimit: 10,
   host: process.env.DB_HOST,
   user: process.env.DB_USER,
@@ -15,7 +14,7 @@ const pool = mysql.createConnection({
   multipleStatements: true
 });
 
-/* pool.getConnection((err, connection) => {
+ pool.getConnection((err, connection) => {
   if (err) {
     if (err.code === "PROTOCOL_CONNECTION_LOST") {
       console.error("Database connection was closed.");
@@ -29,6 +28,6 @@ const pool = mysql.createConnection({
   }
   if (connection) connection.release();
   return;
-});*/
+});
 
 module.exports = pool; 
