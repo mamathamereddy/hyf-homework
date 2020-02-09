@@ -1,0 +1,50 @@
+[
+	{
+		"id": 1,
+		"title": "Indian food in the summer",
+		"maxNumberOfGuests": 5,
+		"description": "A nice night out eating delicious indian food",
+		"createdAt": "2019-12-7",
+		"price": 30
+	},
+	{
+		"id": 2,
+		"title": "Eggs",
+		"maxNumberOfGuests": 7,
+		"description": "boiled eggs with potatos",
+		"createdAt": "2019-12-7",
+		"price": 35
+	},
+	{
+		"id": 3,
+		"title": "Chicken",
+		"maxNumberOfGuests": 10,
+		"description": "Chicken & BEan",
+		"createdAt": "2019-10-28",
+		"price": 55.00
+	},
+	{
+		"id": 4,
+		"title": "Meatball",
+		"maxNumberOfGuests": 12,
+		"description": "Danish meatball",
+		"createdAt": "2019-09-28",
+		"price": 34.55
+	},
+	{
+		"id": 5,
+		"title": "Potato",
+		"maxNumberOfGuests": 4,
+		"description": "Sweet potato",
+		"createdAt": "2019-08-28",
+		"price": 12
+	},
+	{
+		"id": 9,
+		"title": "Pizza",
+		"maxNumberOfGuests": 3,
+		"description": "Pizza with cheese",
+		"createdAt": "2019-08-28",
+		"price": 5.55
+	}
+]
