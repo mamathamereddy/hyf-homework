@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-function AddTodo() {
+function addTodo() {
   const [todolist, setTodolist] = useState([
     {
       id: 1,
@@ -23,7 +23,7 @@ function AddTodo() {
     setTodolist([
       ...todolist,
       {
-        id: todolist.length + 1,
+        id: todos[todos.length -1]?.id + 1 || 1,
         description: "Randomtext",
         completed: false
       }
