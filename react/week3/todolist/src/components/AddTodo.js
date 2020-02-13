@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from "react";
-import TodoForm from './TodoForm'
-import Todo from './Todo'
-
-
+import TodoForm from "./TodoForm";
+import Todo from "./Todo";
 
 function App() {
   const [todos, setTodos] = useState([]);
@@ -36,22 +34,19 @@ function App() {
     newTodos.splice(id, 1);
     setTodos(newTodos);
   };
-    
+
   const handlEdit = id => {
     setTodos(prev => {
       const updatedTodos = prev.map(todo => {
         if (todo.id === id) {
-      
           return { ...todo, state: !todo.state };
-            
-        }
-        else {
+        } else {
           return todo;
         }
       });
       return updatedTodos;
     });
-  }
+  };
   const handleChange = (id, value) => {
     setTodos(prev => {
       const updatedTodos = prev.map(todo => {
@@ -63,7 +58,7 @@ function App() {
       });
       return updatedTodos;
     });
-  }
+  };
 
   return (
     <>
@@ -72,20 +67,18 @@ function App() {
       </div>
 
       {todos.length === 0 ? "No items" : todos.map((todo, id) => (
-        <Todo
-          key={id}
-          id={id}
-          todo={todo}
-          completeTodo={completeTodo}
-          removeTodo={removeTodo}
-          handlEdit={handlEdit}
-          handleChange={handleChange}
-        />
-      ))}
+            <Todo
+              key={id}
+              id={id}
+              todo={todo}
+              completeTodo={completeTodo}
+              removeTodo={removeTodo}
+              handlEdit={handlEdit}
+              handleChange={handleChange}
+            />
+          ))}
     </>
   );
 }
-  
-
 
 export default App;
