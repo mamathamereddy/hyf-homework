@@ -9,6 +9,7 @@ function TodoForm({ addTodo }) {
     if (!value) return;
     addTodo(value, date);
     setValue("");
+    setDate("")
   };
 
   return (
