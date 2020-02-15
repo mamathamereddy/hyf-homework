@@ -29,7 +29,7 @@ function TodoForm({ addTodo }) {
           type="date"
           name="date"
           value={date}
-          id="descriptionInput"
+          id="dateInput"
           onChange={e => setDate(e.target.value)}
           required
         />

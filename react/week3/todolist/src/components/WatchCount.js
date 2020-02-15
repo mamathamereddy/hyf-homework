@@ -4,13 +4,13 @@ function WatchCount() {
   const [count, setCount] = useState(0);
 
   useEffect(() => {
-    var timer = setTimeout(() => {
+    const timer = setTimeout(() => {
       setCount(count => count + 1);
     }, 1000);
     return () => {
       clearTimeout(timer);
     };
-  });
+  },[count]);
 
   return <h2>You have used {count} seconds on this website</h2>;
 }

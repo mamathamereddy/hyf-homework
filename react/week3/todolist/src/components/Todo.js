@@ -1,6 +1,6 @@
 import React from "react";
 import FancyBorder from "./FancyBorder";
-function Todo({ todo, id, completeTodo, removeTodo, handlEdit, handleChange }) {
+function Todo({ todo, completeTodo, removeTodo, handlEdit, handleChange }) {
   return (
     <FancyBorder color="black">
       <li style={{ textDecoration: todo.isCompleted ? "line-through" : "" }}>
@@ -8,7 +8,7 @@ function Todo({ todo, id, completeTodo, removeTodo, handlEdit, handleChange }) {
           <input
             type="text"
             value={todo.description}
-            onChange={e => handleChange(todo.id, e.target.value)}
+            onChange={handleChange}
             autoFocus
           />
         ) : (
@@ -19,11 +19,11 @@ function Todo({ todo, id, completeTodo, removeTodo, handlEdit, handleChange }) {
 
         <input
           type="checkbox"
-          onChange={() => completeTodo(id)}
+          onChange={completeTodo}
           checked={todo.isCompleted}
         />
-        <button onClick={() => removeTodo(id)}>Delete</button>
-        <button onClick={() => handlEdit(todo.id)}>
+        <button onClick={removeTodo}>Delete</button>
+        <button onClick={handlEdit}>
           {todo.state === true ? "Update" : "Edit"}
         </button>
       </li>
