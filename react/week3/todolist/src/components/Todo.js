@@ -1,7 +1,9 @@
 import React from "react";
 import FancyBorder from "./FancyBorder";
 function Todo({ todo, completeTodo, removeTodo, handlEdit, handleChange }) {
+  console.log("render")
   return (
+    
     <FancyBorder color="black">
       <li style={{ textDecoration: todo.isCompleted ? "line-through" : "" }}>
         {todo.state ? (
@@ -30,4 +32,12 @@ function Todo({ todo, completeTodo, removeTodo, handlEdit, handleChange }) {
     </FancyBorder>
   );
 }
-export default Todo;
+
+ function areEqual(prevProps, nextProps) {
+  return prevProps.description===nextProps.description&&prevProps.isCompleted===nextProps.isCompleted
+}
+
+export default React.memo(Todo,areEqual);
+ 
+
+//export default Todo 
