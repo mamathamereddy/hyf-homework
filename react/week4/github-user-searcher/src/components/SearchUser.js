@@ -10,10 +10,7 @@ function SearchUser() {                //Parent
   const [error, setError] = useState("");
 
   useEffect(() => {
-    fetch(`https://api.github.com/search/users?q=${inputvalue}`,
-    {
-      headers: { Authorization: "Basic " + btoa("pugthenid:7eT28vVSfD") }
-    })
+    fetch(`https://api.github.com/search/users?q=${inputvalue}`)
       .then(res => res.json())
       .then(data => {
         setUsername(data.items);
