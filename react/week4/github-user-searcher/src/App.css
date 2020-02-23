@@ -15,7 +15,8 @@ h4{
   color:rgb(228, 77, 72);
 }
 
-
+li{list-style: none;
+}
 
 .App {
   text-align: center;
