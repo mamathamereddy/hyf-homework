@@ -18,8 +18,8 @@ router.get ('/', (request, response) => {
 
 //Adds a new review
 router.post ('/', (request, response) => {
-  const newReview = request.body;
-  pool.query ('INSERT into reviews SET ?',newReview,function(error, results, fields){
+  const Review = request.body;
+  pool.query ('INSERT into reviews SET ?',Review,function(error, results, fields){
       if (error) {
         return response.send (error);
       }
