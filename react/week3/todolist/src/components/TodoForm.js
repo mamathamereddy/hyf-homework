@@ -22,6 +22,7 @@ function TodoForm({ addTodo }) {
           value={value}
           id="descriptionInput"
           onChange={e => setValue(e.target.value)}
+         
           required
         />
         <label htmlFor="descriptionInput">Deadline</label>
