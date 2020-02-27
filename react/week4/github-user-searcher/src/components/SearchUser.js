@@ -10,11 +10,12 @@ function SearchUser() {                //Parent
   const [error, setError] = useState("");
 
   useEffect(() => {
+    setLoading(true);
     fetch(`https://api.github.com/search/users?q=${inputvalue}`)
       .then(res => res.json())
       .then(data => {
         setUsername(data.items);
-        setLoading(!loading);
+        setLoading(false);
       })
       .catch(err => {
         setError("error");
