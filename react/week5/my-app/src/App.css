@@ -38,9 +38,8 @@
 }
 
 img{
-  width: 100px;
-  height: 100px;
-  margin-left: 30px;
+  margin-top:1em;
+  width: 75%;
 }
 
 .items{
@@ -56,3 +55,7 @@ img{
   margin-top: 50px;
 }
 
+.dropdown-list-items {
+  margin: 5px auto 0;
+  text-align: center;
+}
