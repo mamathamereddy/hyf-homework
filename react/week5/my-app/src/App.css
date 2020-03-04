@@ -58,4 +58,5 @@ img{
 .dropdown-list-items {
   margin: 5px auto 0;
   text-align: center;
+  width: 100%;
 }

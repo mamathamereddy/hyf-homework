@@ -42,7 +42,7 @@ const useStyles = makeStyles(theme => ({
     border: "1px solid rgba(255, 255, 255, 0.2)",
     borderRadius: "20px",
     boxShadow: "-3px -3px 10px rgba(255, 255, 255, 0.8), 3px 3px 15px #C9CBD8",
-    color: "rgba(59, 67, 73, 0.75)",
+    color: "rgba(59, 67, 73, 1)",
     flexDirection: "column",
     margin: "1em auto",
     padding: "0.5em 0",
@@ -53,17 +53,6 @@ const useStyles = makeStyles(theme => ({
       backgroundColor: "#EBECF0",
       boxShadow:
         "inset 2px 2px 8px #C9CBD8, inset -3px -3px 10px rgba(255,255,255,0.9)"
-    },
-    "&:hover": {
-      backgroundColor: "#EBECF0",
-      boxShadow:
-        "inset 2px 2px 8px #C9CBD8, inset -3px -3px 10px rgba(255,255,255,0.9)",
-      "& $itemIcon": {
-        color: "#73ABD7"
-      },
-      "& $itemText": {
-        color: "#73ABD7"
-      }
     },
     "&:selected": {
       backgroundColor: "#EBECF0",
@@ -86,6 +75,36 @@ const useStyles = makeStyles(theme => ({
       }
     }
   },
+  itemActive: {
+    backgroundColor: "#EBECF0",
+    border: "1px solid rgba(255, 255, 255, 0.2)",
+    borderRadius: "20px",
+    boxShadow: "inset 2px 2px 8px #C9CBD8, inset -3px -3px 10px rgba(255,255,255,0.9)",
+    color: "rgba(59, 67, 73, 0.75)",
+    flexDirection: "column",
+    margin: "1em auto",
+    padding: "0.5em 0",
+    textAlign: "center",
+    transition: "none",
+    width: "75%",
+    "&:hover": {
+      backgroundColor: "#EBECF0",
+      boxShadow:
+        "inset 2px 2px 8px #C9CBD8, inset -3px -3px 10px rgba(255,255,255,0.9)",
+ 
+      "& $itemIcon": {
+          "&:hover": {
+            color: "#73ABD7"
+          }
+      },
+      "& $itemText": {
+        "&:hover": {
+          color: "#73ABD7"
+        }
+    }
+    }
+
+  },
   itemIcon: {
     color: "rgba(59, 67, 73, 0.75)",
     justifyContent: "center",
@@ -96,7 +115,7 @@ const useStyles = makeStyles(theme => ({
     //fontSize: "2.3rem"
   },
   itemText: {
-    color: "rgba(59, 67, 73, 0.75)",
+    color: "rgba(59, 67, 73, 1)",
     fontSize: "0.9em",
     fontWeight: "300",
     lineHeight: "1.1em",
@@ -117,12 +136,14 @@ function Sidebar() {
   const list = () => {
     setState(!state);
   };
+ // if (state)""
   return (
     <div className={classes.root}>
     <Drawer className={classes.drawer} variant="permanent" classes={{paper: classes.drawerPaper}} anchor="left">
       <List disablePadding dense className={classes.list}>
-        <Logo />
-        <ListItem button key="Dashboard" className={classes.item} onClick={list}>
+          <Logo />
+          <ListItem button key="Dashboard" onClick={list} className={
+            state ? classes.itemActive : classes.item}>
             <ListItemIcon className={classes.itemIcon}>
               <DashboardOutlinedIcon
                 fontSize="large"

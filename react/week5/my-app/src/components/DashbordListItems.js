@@ -7,10 +7,9 @@ const useStyles = makeStyles(theme => ({
   item: {
     borderRadius: "10px",
     fontSize: "0.9em",
-    marginLeft: "-5px",
-    padding: 0,
+    padding: "5px 0",
     textAlign: "center",
-    width: "105%",
+    width: "98%",
     "&:focusVisible": {
       backgroundColor: "#EBECF0",
       boxShadow:
@@ -20,9 +19,6 @@ const useStyles = makeStyles(theme => ({
       backgroundColor: "#EBECF0",
       boxShadow:
         "inset 2px 2px 8px #C9CBD8, inset -3px -3px 10px rgba(255,255,255,0.9)",
-      "& $itemIcon": {
-        color: "#73ABD7"
-      },
       "& $itemText": {
         color: "#73ABD7"
       }
@@ -31,22 +27,23 @@ const useStyles = makeStyles(theme => ({
       backgroundColor: "#EBECF0",
       boxShadow:
         "inset 2px 2px 8px #C9CBD8, inset -3px -3px 10px rgba(255,255,255,0.9)",
-      "& $itemIcon": {
-        color: "#73ABD7"
-      },
       "& $itemText": {
         color: "#73ABD7"
       }
     },
     "&:active": {
       backgroundColor: "#EBECF0",
-      "& $itemIcon": {
-        color: "#73ABD7"
-      },
       "& $itemText": {
         color: "#73ABD7"
       }
     }
+
+  },
+  itemText: {
+    "&:hover": {
+      color: "#73ABD7"
+    }
+
 
   }
 }));
@@ -59,7 +56,7 @@ function DashbordListItems() {
     <div className="dropdown-list-items">
       {items.map((item,i) => (
           <ListItem key={i} button className={classes.item} >
-          <ListItemText className={classes.itemText} disableTypography>{item}</ListItemText>
+            <ListItemText className={classes.itemText} disableTypography>{item}</ListItemText>
         </ListItem>
       ))}
     </div>
