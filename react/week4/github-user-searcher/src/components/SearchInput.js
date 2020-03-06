@@ -8,7 +8,7 @@ function SearchInput() {               //child1
   return (
     <input
       type="text"
-      value={input.inputvalue}
+      value={input.debouncevaluen}
       onChange={event => input.setInputValue(event.target.value)}
       placeholder="Search for user"
       required

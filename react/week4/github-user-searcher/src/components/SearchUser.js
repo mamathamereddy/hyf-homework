@@ -1,6 +1,7 @@
 import React, { useState, useEffect, createContext } from "react";
 import UserList from "./UserList";
 import SearchInput from "./SearchInput";
+import { useDebounce } from 'use-debounce';
 
 export const UserContext = createContext();
 function SearchUser() {                //Parent
@@ -8,10 +9,13 @@ function SearchUser() {                //Parent
   const [inputvalue, setInputValue] = useState("");
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
+  const [debouncevalue] = useDebounce(inputvalue, 200);
+
 
   useEffect(() => {
+    if(debouncevalue!==""){
     setLoading(true);
-    fetch(`https://api.github.com/search/users?q=${inputvalue}`)
+    fetch(`https://api.github.com/search/users?q=${debouncevalue}`)
       .then(res => res.json())
       .then(data => {
         setUsername(data.items);
@@ -19,8 +23,8 @@ function SearchUser() {                //Parent
       })
       .catch(err => {
         setError("error");
-      });
-  }, [inputvalue]);
+      })};
+  }, [debouncevalue]);
   return (
     <>
       <UserContext.Provider
