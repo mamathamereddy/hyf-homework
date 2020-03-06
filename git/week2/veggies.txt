@@ -1,5 +1,7 @@
 Tomato
 Potato
-cabbage
+spinach
 carrot
 cauliflower
+cucumber
+squash
