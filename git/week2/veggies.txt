@@ -1,6 +1,7 @@
 Cauliflower
 Cabbage
-Carrot
+Cucumber
 Tomato
 Potato
-Carrot
+Spinach
+Squash
