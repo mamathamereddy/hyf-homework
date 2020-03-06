@@ -1,5 +1,7 @@
 carrot
 cabbage
-cauliflower
+cucumber
 potato
 tomato
+spinach
+squash
