@@ -1,7 +1,13 @@
 Tomato
 Potato
+<<<<<<< HEAD
 spinach
 carrot
 cauliflower
 cucumber
 squash
+=======
+chilli
+carrot
+cauliflower
+>>>>>>> git/week2
