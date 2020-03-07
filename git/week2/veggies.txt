@@ -1,5 +1,7 @@
 tomato 
 potato
-chilli
+cauliflower
 spinach
 cabbage
+cucumber
+carrot
