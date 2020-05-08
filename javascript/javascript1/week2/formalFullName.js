@@ -1,5 +1,5 @@
 function getFullName(firstName,surName,useFormalName){
- if(!firstname || !surname)  {
+ if(!firstName || !surName)  {
       return "Missing name";
   }
  else if(useFormalName){
