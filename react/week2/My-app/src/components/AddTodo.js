@@ -23,7 +23,7 @@ function addTodo() {
     setTodolist([
       ...todolist,
       {
-        id: todos[todos.length -1]?.id + 1 || 1,
+        id: todolist[todolist.length -1]?.id + 1 || 1,
         description: "Randomtext",
         completed: false
       }
