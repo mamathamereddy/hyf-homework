@@ -5,40 +5,38 @@ function addTodo() {
     {
       id: 1,
       description: "Get out of bed",
-      completed: false
+      completed: false,
     },
     {
       id: 2,
       description: "Brush teeth",
-      completed: false
+      completed: false,
     },
     {
       id: 3,
       description: "Eat breakfast",
-      completed: false
-    }
+      completed: false,
+    },
   ]);
 
   function addTodos() {
     setTodolist([
       ...todolist,
       {
-        id: todolist[todolist.length -1]?.id + 1 || 1,
+        id: todolist[todolist.length - 1]?.id + 1 || 1,
         description: "Randomtext",
-        completed: false
-      }
+        completed: false,
+      },
     ]);
   }
 
-  function removeTodo() {
-    const newToDolist = [...todolist];
-    newToDolist.splice(todolist.id, 1);
-    setTodolist(newToDolist);
+  function removeTodo(id) {
+    setTodolist(todolist.filter((item) => item.id !== id));
   }
 
   function handleCheck(id) {
-    setTodolist(prev => {
-      const updatedTodos = prev.map(todo => {
+    setTodolist((prev) => {
+      const updatedTodos = prev.map((todo) => {
         if (todo.id === id) {
           return { ...todo, completed: !todo.completed };
         } else {
@@ -53,13 +51,24 @@ function addTodo() {
     <div>
       <button onClick={addTodos}>Add Todo</button>
 
-      {todolist.length === 0 ? "No items" : todolist.map(item => (
-            <li key={item.id} style={{textDecorationLine: item.completed ? "line-through" : "" }}>
+      {todolist.length === 0
+        ? "No items"
+        : todolist.map((item) => (
+            <li
+              key={item.id}
+              style={{
+                textDecorationLine: item.completed ? "line-through" : "",
+              }}
+            >
               {item.description}
-              
-          <input type="checkbox" onChange={() => handleCheck(item.id)}checked={item.completed}/>
-              
-          <button onClick={removeTodo}>Delete</button>
+
+              <input
+                type="checkbox"
+                onChange={() => handleCheck(item.id)}
+                checked={item.completed}
+              />
+
+              <button onClick={() => removeTodo(item.id)}>Delete</button>
             </li>
           ))}
     </div>
