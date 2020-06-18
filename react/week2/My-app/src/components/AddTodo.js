@@ -59,7 +59,7 @@ function addTodo() {
               
           <input type="checkbox" onChange={() => handleCheck(item.id)}checked={item.completed}/>
               
-          ls<button onClick={removeTodo}>Delete</button>
+          <button onClick={removeTodo}>Delete</button>
             </li>
           ))}
     </div>
